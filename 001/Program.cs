@@ -8,4 +8,3 @@ System.Console.Write("The square of the number '");
 Console.Write(a);
 Console.Write("' = ");
 Console.Write(Math.Pow(num,2));
-
