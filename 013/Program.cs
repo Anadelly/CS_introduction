@@ -1,18 +1,15 @@
 ﻿// Удалить вторую цифру целого числа введенного с клавиатуры.
 
-
-//d1=a/10%10; // нахождение второго числа
-
-internal class Program
+int N=1234567888;
+int countDigit=0;
+int N1=N;
+while(N!=0) // счетчик количества чисел в числе
 {
-    private static void Main(string[] args)
-    {
-        int num;
-        Console.Write("Введите целое число: ");
-        string a = Console.ReadLine();
-        a = a.Remove(1,1);
-        num = Convert.ToInt32(a);
-
-        Console.WriteLine(num);
-    }
+    countDigit++;
+    N/=10;
 }
+// находим вторую цифру числа
+int d=N1/(int)Math.Pow(10,countDigit-2)%10; // N делим на 10 в степени 7-2 и получаем остаток от деления на 10
+int d1=N1/(int)Math.Pow(10,countDigit-1)%10; // находим первую цифру
+int n2=N1/(int)Math.Pow(10,countDigit-2); //находим последующие цифры
+System.Console.WriteLine($"{d1}"+$"{n2}");
