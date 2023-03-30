@@ -2,9 +2,9 @@
 
 int num;
 Console.Write("Enter an integer: ");
-string a = Console.ReadLine();
-num = Convert.ToInt32(a);
+
+num = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("The square of the number '");
-Console.Write(a);
+Console.Write(num);
 Console.Write("' = ");
 Console.Write(Math.Pow(num,2));
